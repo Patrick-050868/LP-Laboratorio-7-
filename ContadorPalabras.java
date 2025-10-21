@@ -4,12 +4,12 @@ import java.util.*;
 
 public class ContadorPalabras {
   public static void main(String[] args){
-    file archivo = null;
-    while (archivo == null;{
+    File archivo = null;
+    while (archivo == null){
       JFileChooser fc = new JFileChooser ();
       int opcion = fc. showOpenDialog(null);
 
-      if (option == JFileChooser.APPROVE_OPTION){
+      if (opcion == JFileChooser.APPROVE_OPTION){
         archivo = fc.getSelectedFile();
         if(!archivo.exists() || !archivo.isFile()){
           JOptionPane.showMessageDialog(null,"Archivo inválido. Intente de nuevo.");
@@ -28,7 +28,7 @@ public class ContadorPalabras {
         lineas++;
         caracteres += linea.length();
 
-        StringBilder palabra = new StringBuilder ();
+        StringBuilder palabra = new StringBuilder();
         for (char c : linea.toCharArray()) {
           if (Character.isLetterOrDigit(c)) palabra.append(c);
           else if (palabra.length() > 0) {
